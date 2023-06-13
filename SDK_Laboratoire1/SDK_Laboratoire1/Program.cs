@@ -1,11 +1,29 @@
-﻿class Program
+﻿using LibrairieConversionNote;
+
+class Program
 {
     private static void Main(string[] args)
     {
-       
-        Note n1 = new Note;
-        n1.Transformer();
-Console.WriteLine()
+
+        while (true)
+        {
+            Console.Write("Type de conversion: ");
+            var input = Console.ReadLine();
+
+            if (input == "Note")
+            {
+                while (true)
+                {
+                    Console.Write("NOTE: ");
+                    var note = Console.ReadLine();
+                    ConversionAlphabetiqueToNote convertiseur = new ConversionAlphabetiqueToNote();
+                    string ret = convertiseur.Transformer(note);
+                    Console.WriteLine(ret);
+                }
+            }
+        }
+
+        
 
     }
 }
