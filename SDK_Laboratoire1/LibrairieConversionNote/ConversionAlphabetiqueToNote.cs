@@ -5,7 +5,7 @@
         public string Transformer(string alphabetic)
         {
             alphabetic = alphabetic.ToUpper().Trim();
-            var strRetour = "Erreur";
+            var strRetour = "Erreur, la note n’existe pas. Veuillez entrer une note alphabétique entre A et G:";
             if (alphabetic == "A")
             {
                 strRetour = "LA";
